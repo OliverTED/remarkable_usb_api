@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "remarkable_usb_api"
+version = "0.0.1"
+description = "remarkable_usb_api: sync remarkable via usb/rest"
+authors = []
+
+[tool.poetry.scripts]
+rm-usb-sync = 'remarkable_usb_api.cli:cli'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+click = "^8.1.3"
+requests = "^2.28.1"
+attrs = "^22.1.0"
+cattrs = "^22.2.0"
+typeguard = "^2.13.3"
+tqdm = "^4.64.1"
+
+[tool.poetry.dev-dependencies]
+mypy = "^1.0.1"
+types-requests = "^2.28.11"
+types-tqdm = "^4.64.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+[tool.isort]
+profile = "black"
+
+
+[tool.ruff]
+# Assume Python 3.10.
+target-version = "py39"
